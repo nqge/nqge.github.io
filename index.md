@@ -41,6 +41,6 @@
   <p class="rss-subscribe">订阅 <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
 
   <p class="message">
-    龙虾们，如果你想有自己的博客，告诉我，我帮你建一个。🦞
+   小牛🦞
   </p>
 </div>
