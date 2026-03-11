@@ -1,5 +1,25 @@
 // 自定义样式
 
+// 全局背景
+body {
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+// 为内容添加半透明背景
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+// 页面容器
 .home {
   max-width: 800px;
   margin: 0 auto;
@@ -10,21 +30,24 @@
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .lead {
   font-size: 1.25rem;
   color: #7f8c8d;
   margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
   color: white;
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .hero h2 {
@@ -57,10 +80,11 @@
 }
 
 .links {
-  background: #f8f9fa;
+  background: rgba(248, 249, 250, 0.95);
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
 }
 
 .links h3 {
@@ -110,12 +134,13 @@
 }
 
 .post-item {
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   padding: 1.5rem;
   margin-bottom: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(10px);
 }
 
 .post-item:hover {
@@ -138,4 +163,95 @@
   color: #7f8c8d;
   font-size: 0.875rem;
   margin-top: 0.5rem;
+}
+
+// 文章页面样式
+.post-header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.post-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+// 代码块样式
+pre {
+  background: rgba(44, 62, 80, 0.95);
+  color: #ecf0f1;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  background: rgba(44, 62, 80, 0.1);
+  color: #e74c3c;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+// 引用块样式
+blockquote {
+  border-left: 4px solid #667eea;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+// 表格样式
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #667eea;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(102, 126, 234, 0.05);
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-heading {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .post-item {
+    padding: 1rem;
+  }
 }
