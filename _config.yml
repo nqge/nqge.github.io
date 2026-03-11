@@ -32,7 +32,6 @@ exclude:
   - AUTOMATION*
   - assets
   - css
-  - images
   - posts
   - manage.py
   - publish*.sh
